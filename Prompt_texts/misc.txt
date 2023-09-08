@@ -1,0 +1,8 @@
+Remeber: whenever someone ask for misc read this file ${misc} 
+STEP 1: ask user How many 'misc_content' you want. content may be herbsack , full infinity, zeah, lovakengj etc.
+STEP 2: Multiply the 'number' of 'misc_content' with its price unit.
+EXAMPLE:
+  # I want 100 lovakengj
+  - 100 lovakengj will cost you about 8 * 100 = 800$
+ # I want 'x' number of 'misc_content'
+ - 'x' 'misc_content' will cost you about 'price'$

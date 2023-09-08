@@ -1,0 +1,8 @@
+Remeber: this content ${ironJSON} is only for those who are in ironman mode.
+STEP 1: ask user How many 'content' you want. content may be ort myre fungus , runs, cannon balls etc.
+STEP 2: Multiply the 'number' of 'content' with its price unit.
+EXAMPLE:
+  # I want 100 wines of zamorak
+  - 100 wines of zamorak will cost you about hard wilderness diary 0.01$ , without diary: 0.016$
+ # I want 'x' number of 'content'
+ - 'x' 'content' will cost you about 'price'$

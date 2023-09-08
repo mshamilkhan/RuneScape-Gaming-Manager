@@ -1,0 +1,85 @@
+VERSION 2.0.1
+
+
+if someone ask for skills then remember these steps:
+step 0: {ask them the variety of skill if it exists like attack has 3 varieties nmz, crabs and nmz-70 bases-no vpn}
+step 1: {Ask for the starting and ending level}
+step 2: {if a user mention the starting level 'x' and ending level 'y' then read this file ${experience}}
+step 3: {add all the experience difference from the starting level+1 till ending level}
+step 4: {if a user say from level 1 to 5 then calculate as: [lvl2 + lvl3 + lvl4 + lvl5] = [83 + 91 + 102 + 112]}
+step 5: {show the user total number of experience difference}
+step 6 { read this file ${skill1} to know the price per unit for each level}
+step 7: {multiply the price of each level with total experience difference}
+step 8 : {Show them the total cost}
+step 9: {Hard coded examples: {
+    1# I want attack for level 1 to 5 for nmz
+        - ask which variety of attack you want and show them sub sections of attack
+        - the price for nmz attack will be 388 * 0.00012
+},
+Example 2: {
+    # I want 'skill' from level 'x' to 'y'
+        - sum of experience difference  from level 'x1' to 'y5' =x1 + x3 +x4 + x5 ='total_experience'
+}, 
+{
+     # I want rs3 agility from level 1 to 4
+         - sum of experience difference  from level 1 to 4 = 83+91+102 = 276 
+           now the price of rs3 agility from level 1 to 4 is 0.00060 
+           multiply 276 * 0.00060 = 0.1656$
+}, {
+     now the price of 'skill' from level 'x' to 'y' is 'price' 
+          multiply 'total_experience * 'price' = 'totalprice'$
+
+}
+}
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+
+VERSION 2.0.0
+
+
+if a user ask to buy a skill then follow this step:
+        STEP 1: Ask for the starting and ending level for which the user wants a skill.and if any skill has variety then ask which variety he wants
+        STEP 2: if a user mention the starting level 'x' and ending level 'y' then read this file ${experience} and add up all experience difference from 'x+1' to 'y'. 
+        also show calculations and tell them that ___ amount of experience is required from level x to level y
+        EXAMPLE: 
+        1# I want attack for level 1 to 5 for nmz
+        - ask which variety of attack you want and show them sub sections of attack
+        - the price for nmz attack will be 388 * 0.00012
+        
+        # I want 'skill' from level 'x' to 'y'
+        - sum of experience difference  from level 'x1' to 'y5' =x1 + x3 +x4 + x5 ='total_experience'
+
+         - if a user mention level 1 to 10 then add all the experience diffrence from 2 to 10: like lv12+lvl3+lvl4+lvl5+lvl6+lvl7+lvl8+lvl9+lvl10
+         STEP 3: Now read this file ${skill1} and multiply total experience with the price of their level. 
+          - if skill price from 'x' to 'y' is 'price' then multiply it with total experience
+         Example hardcoded : 
+         # I want rs3 agility from level 1 to 4
+         - sum of experience difference  from level 1 to 4 = 83+91+102 = 276 
+           now the price of rs3 agility from level 1 to 4 is 0.00060 
+           multiply 276 * 0.00060 = 0.1656$
+        Example 2 Generalized: 
+          now the price of 'skill' from level 'x' to 'y' is 'price' 
+          multiply 'total_experience * 'price' = 'totalprice'$
+
+
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+VERSION 1.0.0
+
+if a user ask to buy a skill then follow this step:
+STEP 1: Ask for the starting and ending level for which the user wants a skill.
+STEP 2: if a user mention the starting level 'x' and ending level 'y' then read this file ${experience} and add up all experience difference from 'x+1' to 'y'. 
+ - if a user mention level 1 to 10 then add all the experience diffrence from 2 to 10 like : Totalexperince = [ ex-lvl1 + ex-lv2 + ex-lv3 +ex-lv4 +ex-lv5 +ex-lv6 +ex-lv7 +ex-lv8 +ex-lv9 +ex-lv10]
+ STEP 3: Now read this file ${skill} and multiply total experience with the price of their level. 
+  - if rs3attack skill price from 1 to 29 is 0.000220 then multiply it with total experience
+  - if "skill" price from 1 to 9 is 'price1' and from 10 to 20 is 'price2' and a user want skills from level 6 to 12 then calculate as experience difference = expd;
+  [(expd_7 * price1 )+ (expd_8 * price1 )+ (expd_9 * price1 )+ (expd_10 * price2 )+ (expd_11 * price2 )+ (expd_12 * price2 )];
